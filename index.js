@@ -44,9 +44,12 @@ const addNewGoal = () => {
         }
     }
     
+    // If no duplicates, proceed to add the new goal
+    if (goalInput !== '') { // Ensure that the input is not empty
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
-    goalList.appendChild(newGoal);
+    goalList.querySelector('#goalList').appendChild(newGoal);
+    }
 };
 
 // Add event listener to the goal submit button
